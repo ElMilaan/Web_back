@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Serveur absences</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Jeu du plus ou moins !</h1>
+    
+    <form action="/game/started" method="post">
+        <label name="nb">Devinez le nombre (entre 1 et 100) : 
+            <input type="number" id="nb" name="nb"></input>
+        </label>
+        <input type="submit"></input>
+    </form>
+
+    <p>{{ clue }}</p>
+
+    <script></script>
+  </body>
+</html>

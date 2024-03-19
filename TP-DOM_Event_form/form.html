@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulaire</title>
+  </head>
+
+  <body>
+    <form
+      action="mailto:votremail@votreprovider"
+      method="POST"
+      enctype="text/plain"
+    >
+      <h1>MON FORM BASIQUE</h1>
+      <label for="name">Name :</label>
+      <input type="text" id="name" name="name" />
+
+      <label for="firstName">First Name :</label>
+      <input type="text" id="firsName" name="firstName" />
+
+      <label for="age">Age :</label>
+      <input type="number" id="age" name="age" />
+
+      <input id="btn" type="submit" value="Send" />
+    </form>
+
+    <form action="#" method="GET">
+      <h1>MON FORM AVANCE</h1>
+      <label for="name">Name :</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="firstName">First Name :</label>
+      <input type="text" id="firsName" name="firstName" required />
+
+      <label for="nais">Date de Naissance :</label>
+      <input type="date" id="nais" name="nais" required />
+
+      <label for="nbPlaces">Nombre de places :</label>
+      <input
+        type="number"
+        id="nbPlaces"
+        name="nbPlaces"
+        min="1"
+        max="5"
+        required
+      />
+
+      <label for="phone">Phone Number :</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        oninput="limitPhoneNumber()"
+        minlength="10"
+        maxlength="10"
+        required
+      />
+
+      <label for="choices">Select your destination:</label>
+      <div class="checkbox-container">
+        <h4>Bretagne</h4>
+        <input type="checkbox" name="quimper" id="choices" />
+        <label for="quimper">Quimper</label>
+
+        <input type="checkbox" name="brest" id="choices" />
+        <label for="brest">Brest</label>
+
+        <input type="checkbox" name="belleIle" id="choices" />
+        <label for="belleIle">Belle Ile en Mer</label>
+
+        <h4>Sud</h4>
+        <input type="checkbox" name="montpellier" id="choices" />
+        <label for="montpellier">Montpellier</label>
+
+        <input type="checkbox" name="marseille" id="choices" />
+        <label for="marseille">Marseille</label>
+
+        <input type="checkbox" name="nice" id="choices" />
+        <label for="nice">Nice</label>
+
+        <h4>Nord</h4>
+        <input type="checkbox" name="chamonix" id="choices" />
+        <label for="chamonix">Chamonix</label>
+
+        <input type="checkbox" name="gap" id="choices" />
+        <label for="gap">Gap</label>
+
+        <input type="checkbox" name="alpeHuez" id="choices" />
+        <label for="alpeHuez">Alpe d’Huez</label>
+      </div>
+
+      <input id="btn" type="submit" value="Send" />
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>

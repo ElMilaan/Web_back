@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Accueil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="icon" href="{{ url_for('static', filename='IMAC.png') }}"/>
+  </head>
+  <body>
+    <div>
+      <h1>Liste des données</h1>
+      <a href="/">Retour à l'Accueil</a>
+    </div>
+    <br/>
+    {{prout}}
+    <br/>
+    <table>
+      <tr class="head-table">
+        <th>Nom</th>
+        <th>Prix</th>
+        <th>Description</th>
+        <th><a href"/form">Ajouter un jeu</a></th>
+      </tr>      
+    {% for game in  gamesList %}
+      <tr>
+        <td><b>Nom du jeu :</b> {{ game.title }}</td>
+        <td><b>Prix du jeu :</b> {{ game.price }}</td>
+        <td><b>Description :</b> {{ game.desc }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+
+    <script></script>
+  </body>
+</html>
