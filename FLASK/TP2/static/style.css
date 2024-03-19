@@ -40,14 +40,6 @@ form > input {
   min-width: fit-content;
   margin: auto;
 }
-ul {
-  width: 35%;
-  min-width: fit-content;
-  margin: 30px auto;
-}
-ul li {
-  list-style-type: circle;
-}
 div {
   display: flex;
   flex-direction: column;
@@ -76,20 +68,19 @@ a:hover {
 }
 
 table {
+  border-collapse: collapse;
   width: 60%;
-  min-width: fit-content;
-  margin: 30px auto;
-  padding: 50px;
-  background-color: rgb(205, 205, 205);
+  min-width: 600px;
+  margin: 40px auto;
 }
 
-.head-table {
-  border-bottom: solid black 2px;
-}
-
-table th,
-table td {
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
   text-align: left;
-  border-left: solid black 2px;
-  padding: 10px;
+}
+
+th {
+  background-color: #f2f2f2;
 }

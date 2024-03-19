@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-import random
-
-from flask import Flask, abort, jsonify, render_template, request
+from flask import Flask, render_template, request
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -22,7 +19,8 @@ def send():
     title = request.form["title"]
     price = request.form["price"]
     desc = request.form["desc"]
-    gamesList.append({"title":title, "price":price, "desc":desc})
+    plat = request.form["plat"]
+    gamesList.append({"title":title, "price":price, "plat":plat, "desc":desc})
     return render_template('list.html', gamesList = gamesList)
 
 
